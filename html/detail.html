@@ -1,0 +1,12 @@
+<ion-view class="Z_detail">
+	<ion-header-bar class="bar-header">
+		<i class="iconfont icon-fanhui" ng-click="clickMe()"></i>
+		<span>商品详情</span>
+	</ion-header-bar>
+	<ion-content class="main">
+		<img src="{{data.img_url}}"/>
+		<p><span>¥{{data.mbprice}}</span><del>¥{{data.price}}</del></dei></p>
+		<p>{{data.title}}</p>
+		<button>加入购物车</button>
+	</ion-content>
+</ion-view>

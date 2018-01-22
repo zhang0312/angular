@@ -1,0 +1,26 @@
+<ion-view class="Z_shopping">
+	<ion-header-bar class="bar-header">
+		<span>值得逛</span>
+	</ion-header-bar>
+	<ion-content class="main">
+		<ul class="fenlei">
+			<li>商品分类</li>
+			<li>最新上架</li>
+			<li>最高人气</li>
+			<li>最低价</li>
+		</ul>
+		<div class="shop" ng-repeat="data in dataList track by $index">
+			<div class="box">
+				<a href="#"><img src="{{data.img_url}}"/></a>
+				<p><span>¥{{data.mbprice}}</span><del>¥{{data.price}}</del></p>
+				<p>{{data.title}}</p>
+			</div>
+		</div>
+	</ion-content>
+	<ion-footer-bar class="bar-footer">
+			<a href="#/index"><li><i class="iconfont icon-shouye"></i><span>首页</span></li></a>
+			<a href="#/shopping"><li><i class="iconfont icon-baozhuanhuan"></i><span>值得逛</span></li></a>
+			<a href="#/search"><li><i class="iconfont icon-sousuo"></i><span>搜索</span></li></a>
+			<a href="#/personal"><li><i class="iconfont icon-wode"></i><span>个人中心</span></li></a>
+	</ion-footer-bar>
+</ion-view>

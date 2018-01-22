@@ -1,0 +1,102 @@
+<ion-view style="background: #f2eeeb;" class="Z_main">
+	<ion-header-bar class="bar-header">
+		<span>白菜价</span>
+		<i class="iconfont icon-sousuo1" ></i>
+		<p>搜</p>
+	</ion-header-bar>
+	<ion-content class="main">
+		<ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+		<ion-slide-box active-slide="myActiveSlide" style="height: 6.375rem;" auto-play="true" slide-interval="2000" does-continue="true">
+		    <ion-slide>
+		     <!-- <div class="box blue"><h1>BLUE</h1></div>-->
+		      <img src="img/lunbo1.jpg" class="box"/>
+		    </ion-slide>
+		    <ion-slide>
+		      <img src="img/lunbo2.jpg" class="box"/>
+		    </ion-slide>
+		    <ion-slide>
+		      <img src="img/lunbo3.jpg" class="box"/>
+		    </ion-slide>
+		    <ion-slide>
+		      <img src="img/lunbo4.jpg" class="box"/>
+		    </ion-slide>
+		</ion-slide-box>
+		<ion-scroll class="fenlei" direction="x">
+			<div>
+				<dl>
+					<dt><i class="iconfont icon-all"></i></dt>
+					<dd>全部</dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont icon-nvzhuang"></i></dt>
+					<dd>服装</dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont icon-muying"></i></dt>
+					<dd>母婴</dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont icon-meizhuanghufu"></i></dt>
+					<dd>美妆</dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont icon-jujia"></i></dt>
+					<dd>居家</dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont icon-iconset0330"></i></dt>
+					<dd>鞋包</dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont icon-tang"></i></dt>
+					<dd>美食</dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont icon-zihangche"></i></dt>
+					<dd>文体车品</dd>
+				</dl>
+				<dl>
+					<dt><i class="iconfont icon-shumashouji"></i></dt>
+					<dd>数码家电</dd>
+				</dl>
+			</div>
+		</ion-scroll>
+		<div class="youhui">
+			<div class="left">
+				<h4>超值9块9</h4>
+				<p>天天双十一</p>
+				<img src="img/1.jpg" />
+			</div>
+			<div class="right">
+				<div class="top">
+					<h4>美食</h4>
+					<p>好吃不贵</p>
+					<img src="img/2.jpg"/>
+				</div>
+				<div class="bottom">
+					<h4>数码家电</h4>
+					<p>最高返券100</p>
+					<img src="img/3.jpg" />
+				</div>
+			</div>
+		</div>
+		<p class="tui">~爆款推荐~</p>
+		<div class="xiangq" ng-repeat="data in datalist track by $index">
+			<div>
+				<a href="#/index/detail/{{data.id}}"><img src="{{data.img_url}}" /></a>
+				<p><span>¥{{data.mbprice}}</span><del>¥{{data.price}}</del></p>
+				<p>{{data.title}}</p>
+			</div>
+		</div>
+		<ion-infinite-scroll
+		    on-infinite="loadMore()"
+		    distance="1%">
+		</ion-infinite-scroll>
+	</ion-content>
+	<ion-footer-bar class="bar-footer">
+			<a href="#/index"><li><i class="iconfont icon-shouye"></i><span>首页</span></li></a>
+			<a href="#/shopping"><li><i class="iconfont icon-baozhuanhuan"></i><span>值得逛</span></li></a>
+			<a href="#/search"><li><i class="iconfont icon-sousuo"></i><span>搜索</span></li></a>
+			<a href="#/personal"><li><i class="iconfont icon-wode"></i><span>个人中心</span></li></a>
+	</ion-footer-bar>
+</ion-view>

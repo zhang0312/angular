@@ -1,0 +1,13 @@
+<ion-view class="Z_register">
+	<ion-header-bar class="bar-header">
+		<i class="iconfont icon-fanhui" ng-click="clickMe()"></i>
+		<span>注册</span>
+		<span ng-click="fn()">登录</span>
+	</ion-header-bar>
+	<ion-content class="main">
+		<input type="text" placeholder="请输入账号" id="name"/>
+		<input type="password" placeholder="请输入密码" id="psw"/>
+		<input type="password" placeholder="请再次输入密码" id="repsw"/>
+		<input type="button" value="同意用户协议并注册" class="sub" ng-click="_register()"/>
+	</ion-content>
+</ion-view>
